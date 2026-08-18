@@ -1,0 +1,10 @@
+{
+  "format": "WebP",
+  "source": "Pexels",
+  "optimizer": "wsrv.nl",
+  "quality": 45,
+  "target_max_bytes": 100000,
+  "total_references": 100,
+  "unique_source_photos": 100,
+  "duplicates": {}
+}

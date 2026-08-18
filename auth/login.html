@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your Luméa gifting account.">
+  <title>Sign In — Luméa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="../css/auth.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-visual" aria-label="Luméa brand story">
+      <img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F6045405%2Fpexels-photo-6045405.jpeg&w=1000&output=webp&q=45" alt="">
+      <div class="auth-orbit auth-orbit-one"></div>
+      <div class="auth-orbit auth-orbit-two"></div>
+      <div class="auth-visual-content">
+        <a class="auth-brand" href="../index.html" aria-label="Stackly home"><img class="stackly-logo" src="../assets/images/brand/stackly-logo-lumea-palette.webp" alt="Stackly" width="150" height="52"></a>
+        <div class="auth-visual-copy">
+          <span class="auth-kicker">A beautiful reason to return</span>
+          <h1 data-gsap-reveal data-aos="fade-up">Keep the<br><em>good moments</em><br>close.</h1>
+          <p>Your saved gifts, thoughtful notes and orders — all in one quiet little corner.</p>
+          <div class="auth-stat-row">
+            <div class="auth-stat"><strong>01</strong><span>Curated gifts</span></div>
+            <div class="auth-stat"><strong>02</strong><span>Gift-ready</span></div>
+            <div class="auth-stat"><strong>03</strong><span>Made to matter</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-form-panel">
+      <div class="auth-form-wrap">
+        <div class="auth-topline">
+          <a class="auth-back" href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Luméa</a>
+        </div>
+
+        <div class="auth-heading">
+          <p class="eyebrow">Welcome back</p>
+          <h2>Let's make their day<br><em>beautiful.</em></h2>
+          <p>Sign in to continue your gifting journey.</p>
+        </div>
+
+        <form class="auth-form" id="loginForm" novalidate>
+          <div class="auth-role" aria-label="Choose account type">
+            <div class="role-option">
+              <input type="radio" id="loginCustomer" name="role" value="customer" checked>
+              <label for="loginCustomer"><i class="fa-regular fa-user"></i> Customer</label>
+            </div>
+            <div class="role-option">
+              <input type="radio" id="loginAdmin" name="role" value="admin">
+              <label for="loginAdmin"><i class="fa-solid fa-chart-line"></i> Admin</label>
+            </div>
+          </div>
+
+          <div class="auth-field">
+            <label for="loginEmail">Email address</label>
+            <div class="auth-input-wrap">
+              <input class="auth-input" id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="field-message" id="loginEmailMessage"></div>
+          </div>
+
+          <div class="auth-field">
+            <label for="loginPassword">Password</label>
+            <div class="auth-input-wrap">
+              <input class="auth-input" id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password">
+              <button class="password-toggle" type="button" data-target="loginPassword" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+            </div>
+            <div class="field-message" id="loginPasswordMessage"></div>
+          </div>
+
+          <div class="auth-options">
+            <label class="check-label"><input type="checkbox" name="remember"> Remember me</label>
+            <a class="auth-forgot" href="../404.html">Forgot password?</a>
+          </div>
+
+          <button class="auth-submit" type="submit">
+            <span>Enter my account</span><i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <div class="auth-divider">or</div>
+        <p class="auth-switch">New to Luméa? <a href="signup.html">Create an account</a></p>
+        <p class="auth-legal">By continuing, you agree to Luméa's terms and privacy policy.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="auth-toast" id="authToast"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/path-utils.js"></script>
+<script src="../js/auth.js?v=14"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script>/* Universal GSAP entrance */document.addEventListener("DOMContentLoaded",()=>{if(window.gsap){gsap.from("[data-gsap-reveal]",{y:24,opacity:0,duration:.8,ease:"power3.out",clearProps:"transform"});}});</script><script>document.addEventListener("DOMContentLoaded",()=>{if(window.AOS){AOS.init({duration:850,once:true,offset:55,easing:"ease-out-cubic",disable:"mobile"});}});</script><script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script><script src="../js/stackly-routing.js"></script></body>
+</html>

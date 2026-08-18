@@ -1,0 +1,21 @@
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node dependencies if introduced later
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example

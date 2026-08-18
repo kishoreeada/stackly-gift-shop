@@ -1,0 +1,63 @@
+{
+  "version": "v24",
+  "architecture": "professional-static-frontend",
+  "primary_navigation": [
+    "Home",
+    "Shop",
+    "Gift Guide",
+    "Our Story",
+    "Contact"
+  ],
+  "pages": {
+    "root": [
+      "index.html",
+      "404.html"
+    ],
+    "shop": "pages/shop/index.html + 6 subpages",
+    "gift_guide": "pages/gift-guide/index.html + 6 subpages",
+    "about": "pages/about/index.html + 6 subpages",
+    "contact": "pages/contact/index.html + 6 subpages",
+    "authentication": [
+      "auth/login.html",
+      "auth/signup.html"
+    ],
+    "admin_dashboard": "dashboards/admin/index.html + 4 tabs",
+    "customer_dashboard": "dashboards/customer/index.html + 4 tabs"
+  },
+  "shared_resources": {
+    "css": [
+      "css/style.css",
+      "css/responsive.css",
+      "css/inner-pages.css",
+      "css/auth.css",
+      "css/dashboard.css"
+    ],
+    "js": [
+      "js/path-utils.js",
+      "js/main.js",
+      "js/inner-pages.js",
+      "js/auth.js",
+      "js/dashboard.js",
+      "js/stackly-routing.js"
+    ],
+    "brand": "assets/images/brand/stackly-logo-lumea-palette.webp"
+  },
+  "qa": {
+    "total_html": 42,
+    "broken_local_references": 0,
+    "root_html_only": 2,
+    "browser_smoke_test": "not counted as passed; notebook timed out",
+    "filesystem_audit": "passed",
+    "v24_targeted_fixes": [
+      "dashboard sidebar class mismatch fixed",
+      "active dashboard tab styling fixed on all 10 dashboard pages",
+      "Stackly logo restored in dashboard sidebar and logo routes home",
+      "dashboard sidebar spacing tightened",
+      "dashboard hero dead-zone reduced",
+      "contact first signal icon corrected",
+      "inner-page hero hierarchy/overlay refined",
+      "contact primary navigation destinations corrected",
+      "dashboard navigation exempted from global CTA-to-404 routing"
+    ]
+  }
+}

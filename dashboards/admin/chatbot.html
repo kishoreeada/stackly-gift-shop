@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Admin Dashboard — Chatbot.">
+<title>Admin Dashboard — Chatbot | Luméa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></head>
+<body class="dashboard-page" data-role="admin">
+<div class="dash-overlay" aria-hidden="true"></div>
+<div class="dash-shell">
+<aside class="dash-sidebar" aria-label="Admin Dashboard navigation">
+      <div class="dash-sidebar-head">
+        <a class="dash-brand" href="../../index.html" aria-label="Stackly home"><img class="dash-stackly-logo" src="../../assets/images/brand/stackly-logo-lumea-palette.webp" alt="Stackly" width="150" height="52"></a>
+        <button class="dash-close" type="button" aria-label="Close dashboard navigation"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="dash-context">
+        <span>Admin Dashboard</span>
+        <strong>Chatbot</strong>
+      </div>
+      <nav class="dash-nav"><a class="dashboard-nav-link" href="../../index.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i><span>Overview</span></a><a class="dashboard-nav-link" href="catalog.html"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Catalog</span></a><a class="dashboard-nav-link" href="customers.html"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Customers</span></a><a class="dashboard-nav-link active" href="chatbot.html" aria-current="page"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>Chatbot</span></a><a class="dashboard-nav-link" href="settings.html"><i class="fa-solid fa-gear" aria-hidden="true"></i><span>Settings</span></a></nav>
+      <div class="dash-sidebar-bottom">
+        <a href="../../404.html"><i class="fa-solid fa-circle-question" aria-hidden="true"></i><span>Help centre</span></a>
+        <a href="../../auth/login.html" data-logout><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i><span>Logout</span></a>
+      </div>
+    </aside>
+<main class="dash-main">
+<header class="dash-header">
+  <button class="dash-menu" type="button" aria-label="Open dashboard navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  <div class="dash-header-title"><span>Admin Dashboard</span><strong>Chatbot</strong></div>
+  <div class="dash-header-user"><div class="dash-user-copy"><strong data-session-email>Account</strong><span>Admin Dashboard</span></div><div class="dash-avatar" data-session-avatar>L</div></div>
+</header>
+<section class="dash-content">
+  <div class="dash-hero" data-reveal><div><p class="dash-eyebrow">Conversation operations</p><h1 data-gsap-reveal data-aos="fade-up">Make every answer<br><em>feel considered.</em></h1></div><span class="dash-date">ADMIN PORTAL / CHATBOT</span></div>
+  <div class="dash-stats"><article class="dash-stat" data-reveal><span>Conversations</span><strong>482</strong><small>+14% today</small></article><article class="dash-stat" data-reveal><span>Resolved</span><strong>94%</strong><small>+2.1% this week</small></article><article class="dash-stat" data-reveal><span>Escalations</span><strong>12</strong><small>Needs review</small></article><article class="dash-stat" data-reveal><span>Avg. reply</span><strong>18s</strong><small>-4s this month</small></article></div>
+  <div class="dash-content-grid page-chatbot-visual"><article class="dash-panel dash-visual visual-reverse" data-reveal>
+      <div class="visual-media"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F35488308%2Fpexels-photo-35488308.jpeg&w=1000&output=webp&q=45" alt="Keep every conversation unmistakably Luméa." loading="lazy" decoding="async"></div>
+      <div class="visual-copy">
+        <span class="panel-kicker">Warmth, at scale</span>
+        <h2>Automation works best when the experience still feels human.</h2>
+        <p>Keep every conversation unmistakably Luméa.</p>
+        <a class="dash-cta" href="../../404.html">Explore detail <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </article><article class="dash-panel panel-wide" data-reveal><div class="panel-head"><div><span class="panel-kicker">Live conversations</span><h2>Conversation queue</h2></div><a href="../../404.html">View queue</a></div><div class="activity-list"><b><i class="fa-solid fa-message"></i></b><span><strong>Gift recommendation</strong><small>Customer wants a birthday edit · 2 min ago</small></span><a href="../../404.html">Open</a></div><div class="activity-list"><b><i class="fa-solid fa-message"></i></b><span><strong>Delivery question</strong><small>Tracking requested · 7 min ago</small></span><a href="../../404.html">Open</a></div><div class="activity-list"><b><i class="fa-solid fa-message"></i></b><span><strong>Personal note</strong><small>Message refinement requested · 11 min ago</small></span><a href="../../404.html">Open</a></div></article><article class="dash-panel" data-reveal><div class="panel-head"><div><span class="panel-kicker">Assistant health</span><h2>Signals to review</h2></div></div><ul class="feature-list"><li><i class="fa-solid fa-book-open" aria-hidden="true"></i><span><strong>Knowledge base</strong><small>98% answer coverage.</small></span></li><li><i class="fa-solid fa-user-tie" aria-hidden="true"></i><span><strong>Escalations</strong><small>12 conversations need people.</small></span></li><li><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span><strong>Tone checks</strong><small>All recent replies passed.</small></span></li></ul></article><article class="dash-panel panel-wide accent-panel" data-reveal><span class="panel-kicker">A human touch</span><h2>Automation should<br><em>still feel warm.</em></h2><p>Review the conversations that matter and keep Luméa's voice unmistakably thoughtful.</p><a class="dash-cta light" href="../../404.html">Open workspace <i class="fa-solid fa-arrow-right"></i></a></article></div>
+</section>
+</main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="../../js/path-utils.js"></script>
+<script src="../../js/dashboard.js"></script>
+<script src="../../js/stackly-routing.js"></script>
+</body>
+</html>
