@@ -743,3 +743,200 @@ column-gap:12px!important;padding:0 14px!important;margin:0!important;border-rad
   .dashboard-page .dash-hero{margin-bottom:18px!important}
   .dashboard-page .dash-hero h1{font-size:clamp(40px,11vw,56px)!important}
 }
+
+/* v26 QA remediation */
+.dash-header-brand{display:none;align-items:center;flex:0 0 auto}.dash-header-brand img{display:block;width:128px;height:auto;max-height:44px;object-fit:contain}.dash-form-field{margin-bottom:18px}.dash-form-field label{display:block;font-size:15px;font-weight:700;margin-bottom:8px;color:#4d3e45}.dash-form-field label span{color:#72294b}.dash-form-field input,.dash-form-field textarea{width:100%;border:1px solid rgba(40,26,33,.16);background:#fcfaf7;color:#281a21;padding:13px 14px;font-size:15px;outline:0;transition:border-color .25s,box-shadow .25s,background .25s}.dash-form-field textarea{resize:vertical;min-height:150px}.dash-form-field input:focus,.dash-form-field textarea:focus{border-color:#72294b;background:#fff;box-shadow:0 0 0 4px rgba(114,41,75,.08)}.dash-form-field.invalid input,.dash-form-field.invalid textarea{border-color:#b7354b;box-shadow:0 0 0 3px rgba(183,53,75,.07)}.dash-form-field small{display:block;min-height:20px;padding-top:5px;color:#b7354b;font-size:15px}.dash-form-grid{display:flex;gap:18px;flex-wrap:wrap}.dash-form-grid .dash-form-field{flex:1 1 250px}.dash-form-submit{border:0;cursor:pointer;margin-top:3px}.dash-form-success{min-height:22px;margin:12px 0 0;color:#55705e;font-size:15px}.dash-support-intro{flex:1 1 360px}.dash-support-form{flex:1.4 1 520px}.dash-support-intro h2,.dash-support-form .panel-head h2{font:500 34px/1.05 var(--serif);margin:7px 0 12px}.dash-support-intro>p{color:#766970;font-size:16px;line-height:1.65;max-width:620px}.dash-settings-form-panel{flex-basis:100%}.footer-location{color:rgba(255,255,255,.65);font-size:12px;display:inline-flex;align-items:flex-start;gap:2px;line-height:1.5}.footer-location i{width:17px;margin-right:4px;color:#e7b9ad}
+@media(max-width:900px){.dash-header-brand{display:flex}.dash-header{gap:10px}.dash-header-title{flex:1}.dash-header-title strong{overflow:hidden;text-overflow:ellipsis}.dash-header-brand img{width:108px;max-height:40px}}
+@media(max-width:600px){.dash-header-brand img{width:94px;max-height:36px}.dash-header{gap:8px}.dash-menu{width:42px;height:42px}.dash-support-form,.dash-support-intro{flex-basis:100%}}
+
+
+/* QA responsive pass: keep Stackly branding visible in compact dashboard headers. */
+@media(max-width:900px){
+  .dashboard-page .dash-header{padding:0 18px;gap:10px}
+  .dashboard-page .dash-header-brand{display:flex!important;align-items:center;flex:0 0 auto}
+  .dashboard-page .dash-header-brand img{display:block;width:112px;height:auto;max-height:38px}
+  .dashboard-page .dash-header-title{flex:1;min-width:0}
+}
+@media(max-width:600px){
+  .dashboard-page .dash-header{min-height:72px;padding:0 14px;gap:8px}
+  .dashboard-page .dash-header-brand img{width:92px;max-height:34px}
+  .dashboard-page .dash-user-copy{display:none}
+  .dashboard-page .dash-avatar{width:40px;height:40px}
+}
+/* Avoid large empty vertical zones while preserving the editorial rhythm. */
+@media(max-width:900px){
+  .dashboard-page .dash-content{padding-top:24px!important}
+  .dashboard-page .dash-hero{margin-bottom:16px!important}
+}
+
+/* v26 responsive sidebar correction
+   Keep primary navigation scrollable while Help Centre + Logout stay reachable
+   on short tablet/mobile viewports. Applies equally to Client + Admin. */
+@media (max-width: 900px){
+  .dashboard-page .dash-sidebar{
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard-page .dash-sidebar-head,
+  .dashboard-page .dash-context,
+  .dashboard-page .dash-sidebar-bottom{
+    flex: 0 0 auto;
+  }
+
+  .dashboard-page .dash-nav{
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 4px 0 0 !important;
+    padding: 0 0 8px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(240,201,192,.35) transparent;
+  }
+
+  .dashboard-page .dash-sidebar-bottom{
+    margin-top: 0 !important;
+    padding: 12px 0 0 !important;
+    border-top: 1px solid rgba(255,255,255,.12);
+    background: #24131c;
+  }
+
+  .dashboard-page .dash-sidebar-bottom a{
+    min-height: 44px !important;
+    height: 44px !important;
+  }
+}
+
+@media (max-width: 600px){
+  .dashboard-page .dash-sidebar{
+    width: min(320px, 88vw);
+    padding: 20px 16px 14px;
+  }
+
+  .dashboard-page .dash-sidebar-head{
+    min-height: 54px;
+    padding: 0 8px 15px;
+  }
+
+  .dashboard-page .dash-stackly-logo{
+    width: 138px;
+    max-height: 44px;
+  }
+
+  .dashboard-page .dash-context{
+    padding: 18px 10px 8px;
+  }
+
+  .dashboard-page .dash-context strong{
+    margin-top: 3px;
+  }
+
+  .dashboard-page .dash-nav{
+    gap: 3px !important;
+  }
+
+  .dashboard-page .dash-nav-link,
+  .dashboard-page .dashboard-nav-link{
+    min-height: 44px !important;
+    height: 44px !important;
+  }
+
+  .dashboard-page .dash-sidebar-bottom{
+    gap: 3px !important;
+    padding-top: 10px !important;
+  }
+}
+
+/* v27 DEVICE-HEIGHT SAFE SIDEBAR
+   Final responsive correction for iPhone SE/XR/12/14/15/16, Pixel, Galaxy and
+   short tablet viewports. The sidebar itself never grows beyond the viewport;
+   only the primary navigation scrolls. Help Centre + Logout remain visible. */
+@media (max-width: 900px){
+  .dashboard-page .dash-sidebar{
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .dashboard-page .dash-sidebar-head{
+    flex: 0 0 auto;
+  }
+
+  .dashboard-page .dash-context{
+    flex: 0 0 auto;
+  }
+
+  .dashboard-page .dash-nav{
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 0 10px;
+    margin: 2px 0 0 !important;
+  }
+
+  .dashboard-page .dash-sidebar-bottom{
+    flex: 0 0 auto;
+    margin-top: 0 !important;
+    padding: 10px 0 0 !important;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 600px){
+  .dashboard-page .dash-sidebar{
+    width: min(320px, calc(100vw - 24px));
+    padding: 18px 14px 12px;
+  }
+
+  .dashboard-page .dash-sidebar-head{
+    min-height: 52px;
+    padding: 0 7px 13px;
+  }
+
+  .dashboard-page .dash-stackly-logo{
+    width: 132px;
+    max-height: 42px;
+  }
+
+  .dashboard-page .dash-close{
+    width: 42px;
+    height: 42px;
+  }
+
+  .dashboard-page .dash-context{
+    padding: 16px 9px 7px;
+  }
+
+  .dashboard-page .dash-nav{
+    margin-top: 0 !important;
+    padding-bottom: 8px;
+  }
+
+  .dashboard-page .dash-nav-link,
+  .dashboard-page .dashboard-nav-link{
+    min-height: 44px !important;
+    height: 44px !important;
+  }
+
+  .dashboard-page .dash-sidebar-bottom{
+    padding-top: 9px !important;
+  }
+
+  .dashboard-page .dash-sidebar-bottom a{
+    min-height: 42px !important;
+    height: 42px !important;
+  }
+}

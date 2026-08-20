@@ -8,13 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (window.AOS) {
-    AOS.init({
-      duration: 820,
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 55,
-      disable: () => window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    });
+    AOS.init({ duration: 820, easing: "ease-out-cubic", once: true, offset: 55, disable: () => window.matchMedia("(prefers-reduced-motion: reduce)").matches });
   }
 
   document.querySelectorAll("[data-session-email]").forEach((node) => {
@@ -63,8 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Keep all action buttons intentionally unimplemented -> custom 404.
+  // Demo actions still go to the custom 404, but real dashboard forms are functional.
   document.querySelectorAll(".dash-cta, .dash-panel button").forEach((button) => {
+    if (button.closest("form[data-dashboard-form]")) return;
     button.addEventListener("click", (event) => {
       const href = button.getAttribute("href");
       if (href === "404.html") return;
@@ -73,6 +68,48 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = projectUrl("404.html");
       }
     });
+  });
+
+  // Dashboard forms: explicit validation for Support and Settings.
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const formError = (field, message) => {
+    const wrapper = field.closest(".dash-form-field");
+    const target = wrapper?.querySelector(`[data-error-for="${field.name}"]`);
+    wrapper?.classList.toggle("invalid", Boolean(message));
+    if (target) target.textContent = message || "";
+    field.setAttribute("aria-invalid", message ? "true" : "false");
+  };
+
+  document.querySelectorAll("form[data-dashboard-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let valid = true;
+      form.querySelectorAll("[required]").forEach((field) => {
+        const value = field.value.trim();
+        let message = "";
+        if (!value) message = `${field.closest(".dash-form-field")?.querySelector("label")?.textContent.replace("*","").trim() || "This field"} is required.`;
+        if (!message && field.type === "email" && !emailPattern.test(value)) message = "Enter a valid email address.";
+        if (!message && field.name === "message" && value.length < 10) message = "Please enter at least 10 characters.";
+        formError(field, message);
+        if (message) valid = false;
+      });
+      const success = form.querySelector("[data-form-success]");
+      if (!valid) {
+        if (success) success.textContent = "";
+        form.querySelector(".dash-form-field.invalid input,.dash-form-field.invalid textarea")?.focus();
+        return;
+      }
+      if (form.dataset.dashboardForm === "settings") {
+        const data = Object.fromEntries(new FormData(form).entries());
+        localStorage.setItem("stacklySettings", JSON.stringify({ ...data, savedAt: new Date().toISOString() }));
+        if (success) success.textContent = "Changes saved successfully.";
+      } else {
+        if (success) success.textContent = "Support request submitted successfully. Our team will review it shortly.";
+        form.reset();
+      }
+      if (window.gsap && success) gsap.fromTo(success, { y: 8, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "power3.out" });
+    });
+    form.querySelectorAll("input,textarea").forEach(field => field.addEventListener("input", () => { if (field.value.trim()) formError(field, ""); }));
   });
 
   if (window.gsap) {

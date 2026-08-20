@@ -112,3 +112,14 @@ html.menu-is-open, body.menu-open { overflow: hidden; }
 .auth-visual .stackly-logo{
   filter:brightness(0) invert(1);
 }
+
+/* v26 QA: product-card dimensions remain consistent across the bestselling/current edit rail. */
+.editorial-products .editorial-product,.editorial-products .editorial-product-wide{flex:1 1 0;min-width:0}
+.editorial-products .product-photo,.editorial-products .editorial-product:not(.editorial-product-wide) .product-photo{height:430px}
+@media(max-width:767px){.editorial-products .editorial-product,.editorial-products .editorial-product-wide{flex:0 0 100%}.editorial-products .product-photo,.editorial-products .editorial-product:not(.editorial-product-wide) .product-photo{height:390px}}
+
+/* QA: home guide choices are functional links, while retaining the editorial row treatment. */
+.guide-step{color:inherit;text-decoration:none;cursor:pointer;transition:background .3s ease,transform .3s ease,padding-left .3s ease}
+.guide-step:hover{background:rgba(109,39,72,.045);padding-left:8px}
+.guide-step:hover i{transform:translateX(5px)}
+.guide-step i{transition:transform .3s ease}

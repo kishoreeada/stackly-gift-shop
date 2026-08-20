@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const isHeaderControl = !!link.closest(".site-header") &&
       (link.matches(".nav-link, .mobile-nav-link, .header-cta") || isLogo);
     const isAuthControl = link.matches(".auth-switch a, .auth-back, .auth-brand");
+    const isFunctionalRoute = link.matches("[data-functional-route]");
+    const isDashboardFunctional = !!link.closest(".dash-sidebar") || /(?:^|\/)help-centre\.html(?:#|$)/i.test(href);
 
     if (isLogo) {
       link.setAttribute("href", projectUrl("index.html"));
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (isHeaderControl || isDashboardNav || isAuthControl || link.matches("[data-logout]")) return;
+    if (isHeaderControl || isDashboardNav || isAuthControl || isFunctionalRoute || isDashboardFunctional || link.matches("[data-logout]")) return;
 
     link.dataset.route404 = "true";
     link.setAttribute("href", projectUrl("404.html"));

@@ -1,6 +1,6 @@
-# Stackly Gift Shop — v25 Final Repair
+# Stackly Gift Shop — v26 Responsive QA Repair
 
-Final targeted repair pass for dashboard spacing, dashboard navigation, auth-link routing and the 404 experience.
+Final responsive QA repair pass based on the latest tester report. The pass prioritizes responsive stability, real navigation, image loading, spacing and the compact 404 experience.
 
 ## Fixed
 - Removed the oversized dashboard whitespace caused by AOS initialization order.
@@ -100,3 +100,13 @@ The POC documentation will be placed under `docs/` after final project QA.
 - Contact guidance icon corrected.
 - Inner-page hero hierarchy and spacing refined.
 - Contact header routing corrected.
+
+
+## QA remediation v26
+- Fixed dashboard/auth/navigation and responsive QA findings.
+- Added functional Client/Admin Help Centre pages.
+- Added validated Admin Settings form.
+- Added mobile dashboard Stackly header branding.
+- Added Google Maps Stackly location link and official public contact number.
+- Added responsive 404 previous-page action.
+- Centered inner-page mobile heroes and fixed category wrapping.

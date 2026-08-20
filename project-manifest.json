@@ -1,5 +1,5 @@
 {
-  "version": "v24",
+  "version": "v26",
   "architecture": "professional-static-frontend",
   "primary_navigation": [
     "Home",
@@ -21,8 +21,8 @@
       "auth/login.html",
       "auth/signup.html"
     ],
-    "admin_dashboard": "dashboards/admin/index.html + 4 tabs",
-    "customer_dashboard": "dashboards/customer/index.html + 4 tabs"
+    "admin_dashboard": "dashboards/admin/index.html + 4 tabs + settings + help-centre.html",
+    "customer_dashboard": "dashboards/customer/index.html + 4 tabs + help-centre.html"
   },
   "shared_resources": {
     "css": [
@@ -43,10 +43,10 @@
     "brand": "assets/images/brand/stackly-logo-lumea-palette.webp"
   },
   "qa": {
-    "total_html": 42,
+    "total_html": 44,
     "broken_local_references": 0,
     "root_html_only": 2,
-    "browser_smoke_test": "not counted as passed; notebook timed out",
+    "browser_smoke_test": "not run in this environment",
     "filesystem_audit": "passed",
     "v24_targeted_fixes": [
       "dashboard sidebar class mismatch fixed",
@@ -58,6 +58,21 @@
       "inner-page hero hierarchy/overlay refined",
       "contact primary navigation destinations corrected",
       "dashboard navigation exempted from global CTA-to-404 routing"
+    ],
+    "latest_pass": "Responsive QA remediation pass based on the latest tester report",
+    "latest_repairs": [
+      "personal footer phone replaced with an unmistakable test number",
+      "Shop and Gift Guide parent heroes centered at laptop/tablet widths and mobile",
+      "Shop Considered Edit image source repaired with WebP transformation",
+      "Shop occasion/category labels constrained to their containers",
+      "404 rebuilt as a single viewport page with no header, sidebar or logo",
+      "404 previous-page action retained and mobile text kept readable",
+      "mobile menu action buttons moved closer to navigation with tighter spacing",
+      "Stackly logo kept visible in compact dashboard headers",
+      "dashboard Help Centre links kept functional instead of global 404 routing",
+      "Home guide-choice arrows and Start gifting CTA made functional",
+      "announcement text kept identical across responsive views",
+      "local-link and duplicate-image URL filesystem audit passed"
     ]
   }
 }

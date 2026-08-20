@@ -2,39 +2,86 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="The requested page could not be found.">
-<title>404 — Luméa | Page Not Found</title>
+<title>404 — Stackly | Page Not Found</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <style>
-:root{--ink:#24131c;--wine:#72294b;--rose:#e8bfb4;--cream:#f7f0ea;--paper:#fffdf9;--line:rgba(36,19,28,.12);--sans:"DM Sans",sans-serif;--serif:"Playfair Display",serif}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--cream);color:var(--ink)}body{font-family:var(--sans);overflow-x:hidden}.error-page{min-height:100svh;display:flex;flex-direction:column}.error-top{height:42px;background:var(--ink);color:#f6d9d0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.error-main{flex:1;display:flex;align-items:center;justify-content:center;padding:58px 28px 70px;position:relative;overflow:hidden}.error-main:before,.error-main:after{content:"";position:absolute;border:1px solid rgba(114,41,75,.13);border-radius:50%;pointer-events:none}.error-main:before{width:520px;height:520px;right:-220px;top:-180px}.error-main:after{width:420px;height:420px;left:-240px;bottom:-220px}.error-card{width:min(1060px,100%);min-height:560px;display:grid;grid-template-columns:.85fr 1.45fr;background:var(--paper);border:1px solid var(--line);box-shadow:0 30px 80px rgba(36,19,28,.09);position:relative;z-index:1}.error-art{background:var(--ink);color:#fff;position:relative;padding:38px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.error-art:before{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(232,191,180,.25);border-radius:50%;right:-170px;bottom:-150px}.error-brand{display:inline-flex;align-items:center;width:max-content}.error-brand img{width:150px;height:auto;filter:brightness(0) invert(1)}.error-index{font-size:12px;letter-spacing:.18em;color:var(--rose);font-weight:700;text-transform:uppercase}.error-side-copy{position:relative;z-index:1}.error-side-copy h2{font:500 clamp(42px,5vw,70px)/.92 var(--serif);letter-spacing:-.05em;margin:10px 0 0}.error-side-copy em{color:var(--rose)}.error-content{padding:58px clamp(34px,6vw,82px);display:flex;flex-direction:column;justify-content:center}.error-code{display:inline-flex;align-items:center;gap:12px;color:var(--wine);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.error-code:before{content:"";width:34px;height:1px;background:var(--wine)}.error-content h1{font:500 clamp(62px,8vw,108px)/.84 var(--serif);letter-spacing:-.06em;margin:20px 0 18px}.error-content h1 em{color:var(--wine)}.error-copy{max-width:610px;color:#766970;font-size:17px;line-height:1.7;margin:0 0 30px}.error-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.error-home{min-height:52px;padding:0 22px;display:inline-flex;align-items:center;gap:13px;background:var(--wine);color:#fff;text-decoration:none;font-size:15px;font-weight:700;transition:transform .35s ease,box-shadow .35s ease}.error-home:hover{transform:translateY(-4px);box-shadow:0 15px 30px rgba(114,41,75,.22)}.error-home i{transition:transform .35s ease}.error-home:hover i{transform:translateX(4px)}.error-note{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);color:#8b7a80;font-size:13px}.error-note strong{color:var(--ink)}
-@media(max-width:760px){.error-top{height:34px;font-size:9px}.error-main{padding:28px 14px 42px}.error-card{grid-template-columns:1fr;min-height:0}.error-art{min-height:260px;padding:24px}.error-brand img{width:130px}.error-side-copy h2{font-size:47px}.error-content{padding:42px 24px 48px}.error-content h1{font-size:70px}.error-copy{font-size:15px}.error-main:before{width:320px;height:320px;right:-190px}.error-main:after{width:250px;height:250px;left:-180px}}
+:root{--ink:#24131c;--wine:#72294b;--rose:#e8bfb4;--cream:#f7f0ea;--paper:#fffdf9;--muted:#75676e;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0;overflow:hidden}
+body{font-family:var(--sans);background:var(--ink);color:#fff}
+.error-page{height:100svh;min-height:100svh;display:grid;place-items:center;position:relative;isolation:isolate;overflow:hidden}
+.error-page:before,.error-page:after{content:"";position:absolute;border:1px solid rgba(232,191,180,.13);border-radius:50%;pointer-events:none;z-index:-1}
+.error-page:before{width:min(62vw,760px);height:min(62vw,760px);right:-18vw;top:-38vh}
+.error-page:after{width:min(48vw,560px);height:min(48vw,560px);left:-20vw;bottom:-30vh}
+.error-shell{width:min(1120px,calc(100% - 64px));height:min(760px,calc(100svh - 64px));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;position:relative}
+.error-mark{width:72px;height:72px;border:1px solid rgba(232,191,180,.65);border-radius:50%;display:grid;place-items:center;color:var(--rose);font:500 36px var(--serif);margin-bottom:24px;box-shadow:0 0 0 12px rgba(232,191,180,.035)}
+.error-kicker{margin:0 0 18px;color:var(--rose);font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.error-code{font:500 clamp(92px,15vw,190px)/.78 var(--serif);letter-spacing:-.08em;margin:0;color:#fff}
+.error-title{font:500 clamp(38px,5vw,68px)/.92 var(--serif);letter-spacing:-.055em;margin:22px 0 18px}
+.error-title em{color:var(--rose)}
+.error-copy{max-width:620px;margin:0 auto;color:rgba(255,255,255,.7);font-size:17px;line-height:1.65}
+.error-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+.error-action{min-height:54px;padding:0 23px;display:inline-flex;align-items:center;justify-content:center;gap:13px;border:1px solid transparent;text-decoration:none;font-size:15px;font-weight:700;cursor:pointer;transition:transform .35s ease,background .35s ease,color .35s ease,box-shadow .35s ease}
+.error-home{background:#fff;color:var(--wine)}
+.error-previous{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
+.error-action:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(0,0,0,.18)}
+.error-previous:hover{background:#fff;color:var(--wine)}
+.error-action i{transition:transform .3s ease}.error-action:hover i{transform:translateX(4px)}
+.error-note{margin:25px 0 0;color:rgba(255,255,255,.42);font-size:15px}
+@media(max-width:767px){
+  .error-shell{width:100%;height:100svh;padding:24px 20px}
+  .error-mark{width:58px;height:58px;font-size:30px;margin-bottom:18px}
+  .error-kicker{font-size:15px;letter-spacing:.14em;margin-bottom:14px}
+  .error-code{font-size:clamp(82px,27vw,128px)}
+  .error-title{font-size:clamp(34px,9vw,48px);margin:18px 0 14px}
+  .error-copy{font-size:15px;line-height:1.55;max-width:520px}
+  .error-actions{width:100%;margin-top:25px;flex-direction:column;gap:10px}
+  .error-action{width:100%;min-height:52px}
+  .error-note{font-size:15px;margin-top:18px}
+}
+@media(max-width:380px){
+  .error-shell{padding-inline:16px}
+  .error-code{font-size:82px}
+  .error-title{font-size:34px}
+  .error-copy{font-size:15px}
+  .error-note{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body class="error-page">
-<div class="error-top">A thoughtful detour <span style="margin:0 10px">✦</span> The page moved, the feeling stayed.</div>
-<main class="error-main">
-<section class="error-card">
-<aside class="error-art" data-aos="fade-right">
-<a class="error-brand" href="index.html" aria-label="Stackly home"><img src="assets/images/brand/stackly-logo-lumea-palette.webp" alt="Stackly"></a>
-<div class="error-side-copy"><span class="error-index">Luméa / navigation</span><h2>A small<br><em>wrong turn.</em></h2></div>
-</aside>
-<div class="error-content" data-aos="fade-up">
-<span class="error-code">404 · Page not found</span>
-<h1>Not the gift<br><em>you were looking for.</em></h1>
-<p class="error-copy">This destination is not part of the current Luméa experience. Take one step back and continue exploring the collection, stories and thoughtful moments.</p>
-<div class="error-actions"><a class="error-home" href="index.html">Return to Luméa <i class="fa-solid fa-arrow-right"></i></a></div>
-<p class="error-note"><strong>Tip:</strong> Use the main navigation to move between the published pages.</p>
-</div>
-</section>
+<main class="error-shell">
+  <div class="error-mark" data-aos="zoom-in" aria-hidden="true">L</div>
+  <p class="error-kicker" data-aos="fade-up">404 · Page not found</p>
+  <p class="error-code" data-aos="fade-up" data-aos-delay="60">404</p>
+  <h1 class="error-title" data-aos="fade-up" data-aos-delay="110">This little corner<br><em>moved.</em></h1>
+  <p class="error-copy" data-aos="fade-up" data-aos-delay="160">The destination is not part of this experience yet. Return to the previous page or head back to Stackly and keep exploring.</p>
+  <div class="error-actions" data-aos="fade-up" data-aos-delay="220">
+    <a class="error-action error-home" href="index.html">Back to Stackly <i class="fa-solid fa-arrow-right"></i></a>
+    <button class="error-action error-previous" type="button" id="errorPrevious"><i class="fa-solid fa-arrow-left"></i> Back to previous page</button>
+  </div>
+  <p class="error-note">No header, sidebar or extra navigation — just a clear way out.</p>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>document.addEventListener("DOMContentLoaded",()=>{AOS.init({duration:850,once:true,offset:45,easing:"ease-out-cubic"});if(window.gsap&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){gsap.from(".error-brand",{opacity:0,y:-12,duration:.6,ease:"power3.out"});gsap.from(".error-side-copy > *",{opacity:0,x:-18,duration:.6,stagger:.08,ease:"power3.out",delay:.15});gsap.from(".error-content > *",{opacity:0,y:18,duration:.65,stagger:.07,ease:"power3.out",delay:.2});}});</script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  if(window.AOS) AOS.init({duration:700,once:true,offset:20,easing:"ease-out-cubic",disable:()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches});
+  if(window.gsap&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    gsap.fromTo(".error-shell",{opacity:0,y:18},{opacity:1,y:0,duration:.8,ease:"power3.out"});
+    gsap.to(".error-mark",{rotation:360,duration:18,repeat:-1,ease:"none"});
+  }
+  document.getElementById("errorPrevious")?.addEventListener("click",()=>{
+    if(window.history.length>1){window.history.back();}
+    else{window.location.href="index.html";}
+  });
+});
+</script>
 </body>
 </html>
