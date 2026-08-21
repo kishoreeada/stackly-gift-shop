@@ -20,7 +20,7 @@ background:rgba(252,250,247,.995);padding:28px 42px 34px;
 .mobile-close{display:flex}
 .mobile-close span:first-child{transform:rotate(45deg)}
 .mobile-close span:last-child{position:absolute;transform:rotate(-45deg)}
-.mobile-menu nav{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:52px 0 22px}
+.mobile-menu nav{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-block:20px}
 .mobile-nav-link{position:relative;padding:16px 0;color:#665b60;font:500 clamp(27px,4vw,38px)/1.1 var(--serif)}
 .mobile-nav-link.active{color:var(--ink)}
 .mobile-nav-link.active:after{content:"";position:absolute;left:0;right:0;bottom:7px;height:2px;background:var(--wine)}
@@ -36,7 +36,7 @@ background:rgba(252,250,247,.995);padding:28px 42px 34px;
 
 @media(max-width:767px){
 .container{width:min(calc(100% - 28px),var(--container))}
-.announcement{height:auto;min-height:32px;padding:5px 10px;font-size:9px;letter-spacing:.08em;text-align:center;line-height:1.25}.announcement p{margin:0;max-width:100%;white-space:normal}
+.announcement{height:30px;font-size:8px;letter-spacing:.08em;text-align:center}
 .header-inner{min-height:70px}.desktop-nav,.header-actions .header-cta{display:none}.menu-toggle{display:flex;margin-left:auto}
 .mobile-menu{
 position:fixed;inset:0;width:100%;height:100dvh;
@@ -48,11 +48,11 @@ background:rgba(252,250,247,.998);padding:24px 24px 28px;
 .mobile-close{display:flex}
 .mobile-close span:first-child{transform:rotate(45deg)}
 .mobile-close span:last-child{position:absolute;transform:rotate(-45deg)}
-.mobile-menu nav{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:26px 0 10px}
-.mobile-nav-link{position:relative;padding:11px 0;color:#665b60;font:500 clamp(29px,8vw,39px)/1.05 var(--serif)}
+.mobile-menu nav{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-block:18px}
+.mobile-nav-link{position:relative;padding:15px 0;color:#665b60;font:500 clamp(29px,8vw,39px)/1.05 var(--serif)}
 .mobile-nav-link.active{color:var(--ink)}
 .mobile-nav-link.active:after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:var(--wine)}
-.mobile-menu-actions{display:flex;flex-direction:column;gap:10px;flex:0 0 auto;margin-top:8px;padding-bottom:18px}
+.mobile-menu-actions{display:flex;flex-direction:column;gap:9px;flex:0 0 auto}
 .mobile-menu-actions .header-cta{width:100%}
 .hero{min-height:700px}.hero-media img{object-position:60% center}
 .hero-media-shade{background:linear-gradient(180deg,rgba(31,10,20,.44),rgba(31,10,20,.86)),linear-gradient(90deg,rgba(31,10,20,.2),rgba(31,10,20,.08))}
@@ -79,7 +79,7 @@ background:rgba(252,250,247,.998);padding:24px 24px 28px;
 .footer-bottom>span:nth-child(2){margin-left:0}.footer-legal{margin-top:3px}
 }
 @media(max-width:420px){
-.mobile-menu{inset:0;height:100dvh;padding:20px 20px 24px}
+.mobile-menu{inset:0;height:100dvh;padding-inline:20px}
 .mobile-nav-link{font-size:31px}
 .hero,.hero-inner{min-height:660px}.hero-title{font-size:51px}h2{font-size:38px}
 .product-photo,.editorial-product:not(.editorial-product-wide) .product-photo{height:330px}
@@ -100,26 +100,4 @@ background:rgba(252,250,247,.998);padding:24px 24px 28px;
 @media(max-width:767px){
   html,body{max-width:100%;overflow-x:hidden}
   .site-header,.mobile-menu{max-width:100vw}
-}
-
-
-/* QA responsive pass: tester reported the parent-page hero alignment issue on laptop, not only mobile. */
-@media (min-width:768px) and (max-width:1366px){
-  .shop-page .inner-hero-content,.gift-guide-page .inner-hero-content{
-    text-align:center;align-items:center;
-  }
-  .shop-page .inner-hero-content .inner-index,.shop-page .inner-hero-content .inner-eyebrow,
-  .gift-guide-page .inner-hero-content .inner-index,.gift-guide-page .inner-hero-content .inner-eyebrow{
-    margin-left:auto;margin-right:auto;
-  }
-  .shop-page .inner-hero-content h1,.shop-page .inner-lede,
-  .gift-guide-page .inner-hero-content h1,.gift-guide-page .inner-lede{
-    margin-left:auto;margin-right:auto;
-  }
-  .shop-page .inner-hero .button,.gift-guide-page .inner-hero .button{align-self:center}
-}
-
-/* QA: keep announcement content identical and readable at every viewport. */
-@media (max-width:767px){
-  .announcement p{overflow-wrap:normal;word-break:normal}
 }

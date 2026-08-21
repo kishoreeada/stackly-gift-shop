@@ -558,25 +558,3 @@ linear-gradient(0deg,rgba(20,7,14,.58),transparent 55%)}
   .inner-lede{font-size:15px;line-height:1.6}
   .inner-hero-stamp{bottom:24px;right:20px}
 }
-
-/* v26 QA: centered mobile parent-page hero composition */
-@media(max-width:767px){
-  .inner-hero-content{text-align:center;align-items:center}
-  .inner-hero-content .inner-index,.inner-hero-content .inner-eyebrow{margin-left:auto;margin-right:auto}
-  .inner-hero-content h1,.inner-lede{margin-left:auto;margin-right:auto}
-  .inner-hero .button{align-self:center}
-  .inner-hero-image img{object-position:center center}
-  .occasion-track b{font-size:clamp(20px,5.4vw,28px);line-height:1.05;overflow-wrap:anywhere;word-break:normal}
-  .occasion-track a{min-width:0;padding-inline:16px}
-}
-@media(max-width:420px){.occasion-track{grid-template-columns:1fr 1fr}.occasion-track b{font-size:21px}.occasion-track span{margin-bottom:24px}}
-
-
-/* QA responsive stability: category labels must stay inside their cells. */
-.occasion-track a{min-width:0;overflow:hidden}
-.occasion-track b{display:block;min-width:0;max-width:100%;white-space:normal;overflow-wrap:break-word;word-break:normal;line-height:1.12}
-.occasion-track i{flex:0 0 auto}
-@media(max-width:767px){
-  .occasion-track a{min-width:0;padding-inline:14px}
-  .occasion-track b{font-size:clamp(18px,5vw,24px)}
-}
